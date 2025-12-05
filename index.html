@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denko Bashira</title>
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <title>電鋼柱・テック | Thunder Steel Hashira</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #00ffbf;
+            background: #050505;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            height: 100vh;
+            background: url(/background.jpg) center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 0 0 10px #00ffbf;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+        }
+
+        section {
+            padding: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form {
+            margin: 20px 0;
+            padding: 12px;
+            border-left: 4px solid #00ffbf;
+            font-size: 1.2em;
+        }
+
+        .final {
+            color: #ff4444;
+            font-weight: bold;
+            text-shadow: 0 0 20px red;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            border-top: 1px solid #00ffbf;
+        }
+
+        .glow {
+            animation: flicker 2.5s infinite;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+            .card {
+            background: rgba(0, 20, 20, 0.6);
+            border: 1px solid #00ffbf;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #00ffbf;
+        }
+
+        .image-box {
+            width: 300px;
+            height: 400px;
+            border: 2px solid #00ffbf;
+            border-radius: 12px;
+            background-size: cover;
+            background-position: center;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .background-select {
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+        /* Hover Animation Base */
+        .card {
+            background: rgba(0, 20, 20, 0.6);
+            border: 1px solid #00ffbf;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+        }
+
+        /* Glow + Slight Zoom */
+        .card:hover {
+            transform: scale(1.06);
+            box-shadow: 0 0 22px #00ffbf;
+            filter: brightness(1.15);
+            animation: subtleShock 0.2s ease;
+        }
+
+        /* Subtle Shockwave */
+        @keyframes subtleShock {
+            0% { transform: scale(1.06) translate(0px, 0px); }
+            30% { transform: scale(1.065) translate(1.5px, -1.5px) rotate(0.2deg); }
+            60% { transform: scale(1.055) translate(-1.5px, 1.2px) rotate(-0.2deg); }
+            100% { transform: scale(1.06) translate(0px, 0px) rotate(0deg); }
+        }
+
+        /* Lightning Flicker Effect */
+        .card:hover::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            pointer-events: none;
+            box-shadow: 0 0 18px  #00ffbf, inset 0 0 20px #00ffbf;
+            animation: electricFlicker 0.15s infinite steps(2);
+        }
+
+        @keyframes electricFlicker {
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        /* Animated Circuit Background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url(/futuristic-tech-circuit-background-with-glowing-lines-abstract-electronic-network-design-in-blue-tones-perfect-for-technology-data-and-innovation-themes-clean-modern-concept-illustration-vector.jpg);
+            background-size: cover;
+            background-position: center;
+            opacity: 0.35;
+            z-index: -2;
+            animation: bgMove 15s linear infinite;
+        }
+
+        @keyframes bgMove {
+            0% { transform: scale(1) translate(0,0); }
+            50% { transform: scale(1.05) translate(10px, -10px); }
+            100% { transform: scale(1) translate(0,0); }
+        }
+
+        /* Character Focus Mode */
+        .image-box {
+            width: 320px;
+            height: 420px;
+            border: 2px solid #00ffbf;
+            border-radius: 12px;
+            background-size: cover;
+            background-position: center;
+            margin: auto;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        .image-box:hover {
+            box-shadow: 0 0 30px #00ffbf;
+            transform: scale(1.05);
+        }
+
+        /* Dim page except character */
+        .image-box:hover ~ *:not(.image-box) {
+            filter: brightness(0.4);
+        }
+</style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>⚡ 電鋼柱・テック ⚡<br><span class="glow">(Denko Bashira - Tekku)</span></h1>
+</div>
+
+<section>
+    <div class="image-box" style="background-image: url('/Tekkhu.png');"></div>
+
+    <div class="background-select">
+        <p>Thunder-Steel Hashira: <strong>Tekkhu</strong></p>
+    </div>
+
+    <h2>Weapon: Nichirin Nunchucks</h2>
+    <p>Forged with circuitry and electrified metal, these nunchucks channel both physical and digital destruction.</p>
+</section>
+
+<section>
+    <h2>Forms</h2>
+    <div class="form">一ノ型：回路点火 - Circuit Ignition</div>
+    <div class="form">二ノ型：データ奔流 - Data Surge</div>
+    <div class="form">三ノ型：振動波動 - Oscillating Wave</div>
+    <div class="form">四ノ型：防壁返し - Firewall Reversal</div>
+    <div class="form">五ノ型：二進断撃 - Binary Slash</div>
+    <div class="form">六ノ型：電磁衝破 - EMP Burst</div>
+    <div class="form">七ノ型：感染暴走 - Viral Overclock</div>
+    <div class="form">八ノ型：微粒連鎖 - Nanoblade Cascade</div>
+    <div class="form">九ノ型：臨界融解 - Core Meltdown</div>
+    <div class="form">十ノ型：量子幻影 - Quantum Mirage</div>
+    <div class="form">十一ノ型：神経同調 - Neural Sync</div>
+    <div class="form">十二ノ型：再起動 - System Reboot</div>
+    <div class="form final">⚠ １３ノ型：特異点儀式 - Singularity Protocol</div>
+    <div class="form final">🔥 Ω 最終形態：終端過負荷 (Omega Shūtankafuka) — TERMINAL OVERDRIVE 🔥</div>
+</section>
+
+<footer>
+    <p>『 Ω 終端過負荷！！！ 』</p>
+</footer>
+
+<script>
+    // Scroll reveal
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(40px)';
+        card.style.transition = '1s ease';
+        observer.observe(card);
+    });
+</script>
+</body>
+</html>
